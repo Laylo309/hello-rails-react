@@ -1,7 +1,10 @@
-class V1::GreetingsController < ApplicationController
+# frozen_string_literal: true
 
-  def index
-  @greetings = Greeting.all
-  render json: @greetings
+module V1
+  class GreetingsController < ApplicationController
+    def index
+      @greetings = Greeting.all
+      render json: @greetings
+    end
   end
 end
